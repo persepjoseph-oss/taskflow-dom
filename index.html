@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+    <title>Gestor de Tareas</title>
+</head>
+<body>
+    <header class="topbar">
+        <h1>TaskFlow</h1>
+        <span class="badge">DOM Lab</span>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Organiza y conquista tus metas de hoy</h2>
+            <p class="muted">Aprende manipulación del DOM nativo, eventos de usuario y persistencia mientras completas tus tareas.</p>
+
+            <div class="stats">
+                <div class="stat"><span id="stat-total">0</span><small>Total</small></div>
+                <div class="stat"><span id="stat-pending">0</span><small>Pendientes</small></div>
+                <div class="stat"><span id="stat-done">0</span><small>Completadas</small></div>
+            </div>
+
+            <div class="progress">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </section>
+
+        <form id="task-form" class="task-form">
+            <input id="task-input" type="text" placeholder="¿Qué tarea tienes pendiente hoy?" autocomplete="off">
+            <button type="submit">Agregar</button>
+        </form>
+
+        <ul id="task-list" class="task-list"></ul>
+        <p id="empty-msg" class="muted empty" hidden>No hay tareas todavía.</p>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
